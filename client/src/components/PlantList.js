@@ -17,8 +17,7 @@ constructor(){
       .get ("http://localhost:3333/plants")      
       .then (res =>        
         this.setState ({
-          plants: res.data.plantsData //come back to this
-          
+          plants: res.data.plantsData //come back to this          
         }) )
         
       .catch (err => console.log ("Error fetching plants."))
