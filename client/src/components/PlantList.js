@@ -14,13 +14,16 @@ constructor(){
   //   - set the returned plants array to this.state.plants
   componentDidMount(){
     axios
-      .get ("http://localhost:3333/plants")
-      .then (res =>
+      .get ("http://localhost:3333/plants")      
+      .then (res =>        
         this.setState ({
-          plants: [res.data] 
+          plants: res.data.plantsData //come back to this
+          
         }) )
+        
       .catch (err => console.log ("Error fetching plants."))
   }
+  
 
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
   render() {
