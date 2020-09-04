@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // write your custom hook here to control your checkout form
 //declate hook
-export const useForm = (initialValue) => {
+function useForm(initialValue){ 
     //set state to blank fields
     const [values, setValues] = useState(initialValue)
     //on change event
@@ -18,3 +18,5 @@ export const useForm = (initialValue) => {
   //return state and handlechange function to be used in checkoutform
     return [values, handleChanges];
   };
+
+  export default useForm
