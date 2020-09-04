@@ -32,7 +32,7 @@ const CheckoutForm = (props) => {
     e.preventDefault();
     setShowSuccessMessage(true);
   };
-
+  //left names of slices of state as is. Form is unchanged.
   return (
     <>
       <form onSubmit={handleSubmit}>
